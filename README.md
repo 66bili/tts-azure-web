@@ -9,7 +9,8 @@ Key Features:
 - Supports selection of voice, language, style, and character.
 - Supports adjustments of speech speed, intonation, and volume.
 - Supports audio output download.
-- One-click deployment for both local and cloud environments
+- One-click deployment for both local and cloud environments.
+- Supports SSML config import and export.
 
 This application is ideal for those looking to minimize setup while experiencing the full capabilities of Azure TTS.
 
@@ -28,6 +29,19 @@ Get your API Key
 
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FFemoon%2Ftts-azure-web&env=SPEECH_KEY&env=SPEECH_REGION&project-name=tts-azure-web&repository-name=tts-azure-web)
 
+## Deploy locally
+
+```bash
+# install yarn
+npm i -g yarn
+# install dependencies
+yarn
+# building the production environment
+yarn build
+# run production environment serve
+yarn start
+```
+
 ## Development
 
 Before starting development, you must create a new `.env.local` file at project root, and place your azure key and region into it:
@@ -44,10 +58,12 @@ NEXT_PUBLIC_MAX_INPUT_LENGTH=4000
 Run the development server:
 
 ```bash
+# install yarn
+npm i -g yarn
 # install dependencies
-pnpm i
+yarn
 # run serve
-pnpm run dev
+yarn dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000/) with your browser to see the result.
